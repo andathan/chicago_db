@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block content%}
+
+<h1><p> <b> Please select date and coordinates </b></p></h1>
+<p> Example Test input </p>
+<p> Start Date = 2016-11-02 00:00:00</p>
+<p>x1 = 41.76819814695611</p>
+<p>x2 = 41.8962419581672</p>
+<p>y1 = -87.72121957507471</p>
+<p>y2 = -87.63588403606937</p>
+ <img src="{% static 'coordinates.jpg' %}" alt="coordinates_example_schema"> 
+<form method ='POST'> {% csrf_token %}
+{{form.as_p}}
+ <input type="submit" value=" Submit">
+<form>
+{% endblock %}

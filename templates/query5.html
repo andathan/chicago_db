@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Query 5</h1>
+<ul>
+
+<p> Most common incident for given coordinates for date = {{start_date}}
+{% for result_line in object  %} 
+<li>{{result_line.0}} | {{result_line.1}}</li>
+{% endfor %} 
+</ul>
+{% endblock %}

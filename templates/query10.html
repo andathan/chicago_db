@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Query 10</h1>
+<ul>
+<p> Ids of requests with number of premises with garbage baited less than {{number}}</p>
+{% for result_line in object  %} 
+<li>{{result_line.0}} | {{result_line.1|floatformat}}</li>
+{% endfor %} 
+</ul>
+{% endblock %}

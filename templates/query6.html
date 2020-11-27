@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Query 6</h1>
+<ul>
+
+<p> TOP 5 SSA areas from {{start_date}} to {{end_date}}
+<li><b> Area | Incidents </b></li>
+{% for result_line in object  %} 
+<li>{{result_line.0|floatformat}} | {{result_line.1}}</li>
+{% endfor %} 
+</ul>
+{% endblock %}

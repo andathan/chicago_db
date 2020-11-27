@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Query 12</h1>
+<ul>
+<p> Police district IDs that handled more than one rodent baiting and more than one pot holes requests in the same date</p>
+{% for result_line in object  %} 
+<li>{{result_line.0|floatformat}} </li>
+{% endfor %} 
+</ul>
+{% endblock %}

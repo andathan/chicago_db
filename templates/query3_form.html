@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1><p> <b> Please select date </b></p></h1>
+<p> Example Test input </p>
+<p> Date = 2018-11-01 00:00:00</p>
+<form method ='POST'> {% csrf_token %}
+{{form.as_p}}
+ <input type="submit" value=" Submit">
+<form>
+{% endblock %}

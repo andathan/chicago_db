@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1><p> <b> Step 1: First some general information about your incident </b></p></h1>
+<p>Usage: Type incident's request id or leave blank and the system will automatically provide one.</p>
+<p>If you want, you can leave fields blank. Type of service request cant be blank </p>
+<form method ='POST'> {% csrf_token %}
+{{form.as_p}}
+ <input type="submit" value=" Submit">
+<form>
+{% endblock %}

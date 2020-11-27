@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Query 4</h1>
+<ul>
+
+<p> Avg computation time for incidents between {{start_date}} and {{end_date}}
+{% for result_line in object  %} 
+<li>{{result_line.0}} | {{result_line.1}}</li>
+{% endfor %} 
+</ul>
+{% endblock %}

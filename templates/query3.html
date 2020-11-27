@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Query 3</h1>
+<ul>
+
+<p> Most common incident per zicode for date = {{start_date}}
+{% for result_line in object  %} 
+<li>{{result_line.0|floatformat}} | {{result_line.1}}</li>
+{% endfor %} 
+</ul>
+{% endblock %}

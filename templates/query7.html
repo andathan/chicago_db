@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Query 7 </h1>
+<ul>
+<p> License plates that have more than one abandoded vehicles complaints</p>
+<li> <b> Plate | Abandoded Vehicles Complaints </b> </li>
+{% for result_line in object  %} 
+<li>{{result_line.0}} | {{result_line.1}}</li>
+{% endfor %} 
+</ul>
+{% endblock %}

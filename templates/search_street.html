@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Search indicents by street address </h1>
+<p>request id | Creation Date | Status | Completion Date | Service Request Number | Type of Service Request | Street Address | Zip Code | Wards | Police District | Community Area | Latitude | Longitude | Historical Wards | Zip Codes | Community Areas | Census Tracts | Ward | SSA | Y coordinate | X coordinate | Location</p>
+<ul>
+{% for result_line in object  %} 
+<li>{{ result_line.0 }} | 
+{{ result_line.1 }} | 
+{{ result_line.2 }} | 
+{{ result_line.3 }} | 
+{{ result_line.4 }} | 
+{{ result_line.5 }} | 
+{{ result_line.6 }} | 
+{{ result_line.7|floatformat }} | 
+{{ result_line.8 }} | 
+{{ result_line.9 }} | 
+{{ result_line.10 }} | 
+{{ result_line.11}} | 
+{{ result_line.12 }} | 
+{{ result_line.13 }} | 
+{{ result_line.14 }} | 
+{{ result_line.15 }} | 
+{{ result_line.16 }} | 
+{{ result_line.17 }} | 
+{{ result_line.18 }} | 
+{{ result_line.19 }} | 
+{{ result_line.20 }} | 
+{{ result_line.21 }} 
+</li>
+{% endfor %} 
+</ul>
+{% endblock %}

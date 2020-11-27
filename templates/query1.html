@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Query 1 </h1>
+<ul>
+<p> Total Requests per type that were created between {{start_date}} and {{end_date}} and sorted it in descending order
+{% for result_line in object  %} 
+<li>{{result_line.0}} | {{result_line.1}}</li>
+{% endfor %} 
+</ul>
+{% endblock %}
